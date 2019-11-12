@@ -19,23 +19,19 @@
           <h3># of Hoglets</h3>
           <h3>Allergies</h3>
         </div>
-        <div class="invitation-list-items">
-          <p id="name">Sara</p>
-          <p id="hoglets">15</p>
-          <p id="allergies">gluten</p>
-          <button type="button" name="uninvite">Uninvite</button>
-        </div>
+        <!-- Invited Hedgehogs will appear here -->
       </section>
       <section class="main-section-invite-form">
         <form>
           <h2>Invite Another Hedgehog</h2>
-          <input type="text" name="name" value="Name of Hedgehog">
-          <input type="text" name="hoglets" value="Number of Hoglets">
-          <input type="text" name="allergies" value="Allergies">
-          <button type="button" name="invite">Invite!</button>
+          <input id="name-input" type="text" name="name" value="Name of Hedgehog">
+          <input id="hoglets-input" type="text" name="hoglets" value="Number of Hoglets">
+          <input id="allergies-input" type="text" name="allergies" value="Allergies">
+          <button id="invite-btn" type="button" name="invite">Invite!</button>
         </form>
         <img src="./assets/Hedgehog.jpg" alt="small hedgehog in a cup">
       </section
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
