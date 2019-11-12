@@ -9,16 +9,20 @@ inviteBtn.addEventListener('click', addHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
 function addHedgehog() {
-  invitationList.innerHTML +=
-    `<div class="invitation-list-items">
-      <p id="name">${nameInput.value}</p>
-      <p id="hoglets">${hogletsInput.value}</p>
-      <p id="allergies">${allergiesInput.value}</p>
-      <button id="uninvite-btn" type="button" name="uninvite">Uninvite</button>
-    </div>`
-    allergiesInput.value = 'Allergies';
-    hogletsInput.value = 'Number of Hoglets';
-    nameInput.value = 'Name of Hedgehog';
+  if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
+    console.log('yeet');
+  } else {
+    invitationList.innerHTML +=
+      `<div class="invitation-list-items">
+        <p id="name">${nameInput.value}</p>
+        <p id="hoglets">${hogletsInput.value}</p>
+        <p id="allergies">${allergiesInput.value}</p>
+        <button id="uninvite-btn" type="button" name="uninvite">Uninvite</button>
+      </div>`
+      allergiesInput.value = 'Allergies';
+      hogletsInput.value = 'Number of Hoglets';
+      nameInput.value = 'Name of Hedgehog';
+  }
 }
 
 function uninviteHedgehog(event) {
