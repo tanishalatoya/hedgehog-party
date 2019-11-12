@@ -23,6 +23,8 @@ section {
 /* STYLING FOR INVITATION LIST */
 .main-section-invitation-list {
   background: white;
+  max-height: 20em;
+  overflow: scroll;
 }
 
 .invitation-list-headers {
