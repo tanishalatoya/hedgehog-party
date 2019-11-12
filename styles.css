@@ -1,0 +1,110 @@
+/* GENERAL PAGE STYLING */
+html {
+  background: #3A3A6C;
+  font-family: 'Quicksand', sans-serif;
+}
+
+header {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+main {
+  height: 80%;
+  width: 60%;
+  margin: auto;
+}
+
+section {
+  height: 50%;
+  padding: 4%;
+}
+
+/* STYLING FOR INVITATION LIST */
+.main-section-invitation-list {
+  background: white;
+}
+
+.invitation-list-headers {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #372A5E;
+}
+
+.invitation-list-headers h3 {
+  width: 30%;
+  font-size: 1em;
+}
+
+.invitation-list-items {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #372A5E;
+}
+
+.invitation-list-items button {
+  border: none;
+  background: #D2D3E7;
+  height: 10%;
+  text-transform: uppercase;
+  font-size: .8em;
+  margin-top: 1%;
+}
+
+.invitation-list-items p {
+  width: 30%;
+  font-size: 1em;
+  height: 20%;
+  margin: 1% 0;
+}
+
+/* GENERAL STYLING FOR FORM SECTION */
+.main-section-invite-form {
+  background: #656794;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-section-invite-form form {
+  width: 100%;
+}
+
+.main-section-invite-form h2 {
+  color: white;
+  margin-top: 0;
+}
+
+.main-section-invite-form input,
+.main-section-invite-form button {
+  border: none;
+  margin-top: 2%;
+}
+
+.main-section-invite-form input:first-child {
+  margin-top: 0;
+}
+
+.main-section-invite-form input {
+  color: #656794;
+  font-size: .8em;
+  height: 12%;
+  padding-left: 1.5em;
+  padding: .5%;
+  width: 90%;
+}
+
+.main-section-invite-form button {
+  background: #382C5F;
+  border-radius: 0%;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  height: 15%;
+  width: 91%;
+}
+
+section img {
+  height: auto;
+  margin-top: 7%;
+  width: 25%;
+}
