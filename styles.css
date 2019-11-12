@@ -35,8 +35,6 @@ section {
 .invitation-list-headers h3 {
   width: 30%;
   font-size: 1em;
-
-  padding-bottom: 1%;
 }
 
 .invitation-list-items {
@@ -52,7 +50,6 @@ section {
   text-transform: uppercase;
   font-size: .8em;
   margin-top: 1%;
-
 }
 
 .invitation-list-items p {
