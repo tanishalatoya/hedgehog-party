@@ -5,7 +5,7 @@ html {
 }
 
 header {
-  color: white;
+  color: #FFFFFF;
   text-align: center;
 }
 
@@ -21,7 +21,6 @@ section {
 }
 
 /* STYLING FOR INVITATION LIST */
-
 .main-section-invitation-list {
   background: white;
 }
@@ -64,7 +63,10 @@ section {
   background: #656794;
   display: flex;
   justify-content: space-around;
+}
 
+.main-section-invite-form form {
+  width: 100%;
 }
 
 .main-section-invite-form h2 {
@@ -75,7 +77,7 @@ section {
 .main-section-invite-form input,
 .main-section-invite-form button {
   border: none;
-  margin-top: 1em;
+  margin-top: 2%;
 }
 
 .main-section-invite-form input:first-child {
@@ -86,9 +88,9 @@ section {
   color: #656794;
   font-size: .8em;
   height: 12%;
-  padding-left: 1em;
-  padding: .2em;
-  width: 95%;
+  padding-left: 1.5em;
+  padding: .5%;
+  width: 90%;
 }
 
 .main-section-invite-form button {
@@ -98,7 +100,7 @@ section {
   font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   height: 15%;
-  width: 98%;
+  width: 91%;
 }
 
 section img {
