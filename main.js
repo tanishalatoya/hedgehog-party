@@ -1,16 +1,17 @@
-var allergiesInput = document.querySelector('#allergies-input');
-var hogletsInput = document.querySelector('#hoglets-input');
 var invitationList = document.querySelector('.main-section-invitation-list');
 var inviteBtn = document.querySelector('#invite-btn');
-var nameInput = document.querySelector('#name-input');
 
 
 inviteBtn.addEventListener('click', addHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
 function addHedgehog() {
+  var allergiesInput = document.querySelector('#allergies-input');
+  var hogletsInput = document.querySelector('#hoglets-input');
+  var nameInput = document.querySelector('#name-input');
+
   if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
-    console.log('yeet');
+    alert('Please fill in all fields to continue.');
   } else {
     invitationList.innerHTML +=
       `<div class="invitation-list-items">
