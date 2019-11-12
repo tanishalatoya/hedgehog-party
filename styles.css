@@ -47,6 +47,7 @@ section {
 .invitation-list-items button {
   border: none;
   background: #D2D3E7;
+  cursor: pointer;
   height: 10%;
   text-transform: uppercase;
   font-size: .8em;
@@ -99,6 +100,7 @@ section {
   background: #382C5F;
   border-radius: 0%;
   color: white;
+  cursor: pointer;
   font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   height: 15%;
