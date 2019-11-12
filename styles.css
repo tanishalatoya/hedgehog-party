@@ -24,22 +24,23 @@ section {
   background: white;
 }
 
+/* GENERAL STYLING FOR FORM SECTION */
 .main-section-invite-form {
+  background: #656794;
   display: flex;
   justify-content: space-around;
-  background: #656794;
 
 }
 
 .main-section-invite-form h2 {
-  margin-top: 0;
   color: white;
+  margin-top: 0;
 }
 
 .main-section-invite-form input,
 .main-section-invite-form button {
-  margin-top: 1em;
   border: none;
+  margin-top: 1em;
 }
 
 .main-section-invite-form input:first-child {
@@ -48,26 +49,25 @@ section {
 
 .main-section-invite-form input {
   color: #656794;
-  padding: .2em;
-  padding-left: 1em;
   font-size: .8em;
-  width: 95%;
   height: 12%;
+  padding-left: 1em;
+  padding: .2em;
+  width: 95%;
 }
 
 .main-section-invite-form button {
+  background: #382C5F;
+  border-radius: 0%;
   color: white;
   font-family: 'Quicksand', sans-serif;
   font-size: 1em;
-  background: #382C5F;
-  width: 98%;
-  border-radius: 0%;
   height: 15%;
-}
-
+  width: 98%;
+} 
 
 section img {
-  margin-top: 7%;
   height: auto;
+  margin-top: 7%;
   width: 25%;
 }
