@@ -2,10 +2,10 @@ var invitationList = document.querySelector('.main-section-invitation-list');
 var inviteBtn = document.querySelector('#invite-btn');
 
 
-inviteBtn.addEventListener('click', addHedgehog);
+inviteBtn.addEventListener('click', inviteHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
-function addHedgehog() {
+function inviteHedgehog() {
   var allergiesInput = document.querySelector('#allergies-input');
   var hogletsInput = document.querySelector('#hoglets-input');
   var nameInput = document.querySelector('#name-input');
