@@ -11,24 +11,22 @@ inviteBtn.addEventListener('click', inviteHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
 function toggleInviteBtn(event) {
-  if (!nameInput.value.length >= 3 && hogletsInput.value && !allergiesInput.value.length >= 3) {
-    inviteBtn.disabled = true;
+  if (!nameInput.value && nameInput.value.length >= 3 && hogletsInput.value && !allergiesInput.value.length >= 3) {
+    // inviteBtn.disabled = true;
   } else {
-    inviteBtn.disabled = false;
+    // inviteBtn.disabled = false;
     inviteBtn.classList.add('active');
     }
   }
 
 
 function inviteHedgehog() {
-  var mainSection = document.querySelector('main');
+  var alert = document.querySelector('.alert');
 
   if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
-    mainSection.innerHTML +=
-    `<div class="alert">
-      <p>Please fill out all fields to continue.</p>
-    </div>`
+    alert.classList.remove('display-hidden');
   } else {
+    alert.classList.add('display-hidden');
     invitationList.innerHTML +=
       `<div class="invitation-list-items">
         <p id="name">${nameInput.value}</p>
