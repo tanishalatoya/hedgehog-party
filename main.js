@@ -1,15 +1,26 @@
 var invitationList = document.querySelector('.main-section-invitation-list');
 var inviteBtn = document.querySelector('#invite-btn');
+var invteForm = document.querySelector('.main-section-invite-form');
+var allergiesInput = document.querySelector('#allergies-input');
+var hogletsInput = document.querySelector('#hoglets-input');
+var nameInput = document.querySelector('#name-input');
 
 
+invteForm.addEventListener('input', toggleInviteBtn);
 inviteBtn.addEventListener('click', inviteHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
-function inviteHedgehog() {
-  var allergiesInput = document.querySelector('#allergies-input');
-  var hogletsInput = document.querySelector('#hoglets-input');
-  var nameInput = document.querySelector('#name-input');
+function toggleInviteBtn(event) {
+  if (!nameInput.value.length >= 3 && hogletsInput.value && !allergiesInput.value.length >= 3) {
+    inviteBtn.disabled = true;
+  } else {
+    inviteBtn.disabled = false;
+    inviteBtn.classList.add('active');
+    }
+  }
 
+
+function inviteHedgehog() {
   if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
     alert('Please fill in all fields to continue.');
   } else {
@@ -20,9 +31,12 @@ function inviteHedgehog() {
         <p id="allergies">${allergiesInput.value}</p>
         <button id="uninvite-btn" type="button" name="uninvite">Uninvite</button>
       </div>`
+
       allergiesInput.value = 'Allergies';
       hogletsInput.value = 'Number of Hoglets';
       nameInput.value = 'Name of Hedgehog';
+
+      inviteBtn.classList.remove('active');
   }
 }
 
