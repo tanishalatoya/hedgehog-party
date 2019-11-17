@@ -124,5 +124,8 @@ section img {
   font-weight: bold;
   text-transform: uppercase;
   width: 100%;
+}
 
+.display-hidden {
+  display: none;
 }
