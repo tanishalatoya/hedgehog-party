@@ -97,7 +97,7 @@ section {
 }
 
 .main-section-invite-form button {
-  background: #382C5F;
+  background: #bab0da;
   border-radius: 0%;
   color: white;
   cursor: not-allowed;
@@ -107,15 +107,9 @@ section {
   width: 91%;
 }
 
-.main-section-invite-form .active button {
+.main-section-invite-form button.active {
   background: #382C5F;
-  border-radius: 0%;
-  color: white;
   cursor: pointer;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
-  height: 15%;
-  width: 91%;
 }
 
 section img {
