@@ -21,9 +21,13 @@ function toggleInviteBtn(event) {
 
 
 function inviteHedgehog() {
+  var mainSection = document.querySelector('main');
+
   if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
-    inviteForm.innerHTML +=
-    `<p class="alert">Please fill out all fields to continue.</p>`
+    mainSection.innerHTML +=
+    `<div class="alert">
+      <p>Please fill out all fields to continue.</p>
+    </div>`
   } else {
     invitationList.innerHTML +=
       `<div class="invitation-list-items">
