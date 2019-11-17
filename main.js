@@ -1,12 +1,12 @@
 var invitationList = document.querySelector('.main-section-invitation-list');
 var inviteBtn = document.querySelector('#invite-btn');
-var invteForm = document.querySelector('.main-section-invite-form');
+var inviteForm = document.querySelector('.main-section-invite-form');
 var allergiesInput = document.querySelector('#allergies-input');
 var hogletsInput = document.querySelector('#hoglets-input');
 var nameInput = document.querySelector('#name-input');
 
 
-invteForm.addEventListener('input', toggleInviteBtn);
+inviteForm.addEventListener('input', toggleInviteBtn);
 inviteBtn.addEventListener('click', inviteHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
@@ -22,7 +22,8 @@ function toggleInviteBtn(event) {
 
 function inviteHedgehog() {
   if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
-    alert('Please fill in all fields to continue.');
+    inviteForm.innerHTML +=
+    `<p>Please fill out all fields to continue.</p>`
   } else {
     invitationList.innerHTML +=
       `<div class="invitation-list-items">
