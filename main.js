@@ -4,6 +4,7 @@ var inviteForm = document.querySelector('.main-section-invite-form');
 var allergiesInput = document.querySelector('#allergies-input');
 var hogletsInput = document.querySelector('#hoglets-input');
 var nameInput = document.querySelector('#name-input');
+var alert = document.querySelector('.alert');
 
 
 inviteForm.addEventListener('input', toggleInviteBtn);
@@ -11,19 +12,16 @@ inviteBtn.addEventListener('click', inviteHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
 function toggleInviteBtn(event) {
-  if (!nameInput.value && nameInput.value.length >= 3 && hogletsInput.value && !allergiesInput.value.length >= 3) {
-    // inviteBtn.disabled = true;
-  } else {
-    // inviteBtn.disabled = false;
+  if (nameInput.value.length >= 3 && hogletsInput.value && allergiesInput.value.length >= 3) {
+    inviteBtn.disabled = false;
     inviteBtn.classList.add('active');
+  } else {
+    inviteBtn.disabled = true;
     }
-  }
-
+  };
 
 function inviteHedgehog() {
-  var alert = document.querySelector('.alert');
-
-  if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
+  if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (isNaN(hogletsInput.value)) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
     alert.classList.remove('display-hidden');
   } else {
     alert.classList.add('display-hidden');
@@ -41,10 +39,10 @@ function inviteHedgehog() {
 
       inviteBtn.classList.remove('active');
   }
-}
+};
 
 function uninviteHedgehog(event) {
   if(event.target.parentElement.parentElement.children[2].childNodes[7].id === 'uninvite-btn') {
-    event.target.parentElement.remove()
+    event.target.parentElement.remove();
   }
-}
+};
