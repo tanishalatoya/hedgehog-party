@@ -21,9 +21,15 @@ function toggleInviteBtn(event) {
   };
 
 function inviteHedgehog() {
-  if ((nameInput.value === 'Name of Hedgehog') || (!nameInput.value) || (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) || (isNaN(hogletsInput.value)) || (allergiesInput.value === 'Allergies') || (!allergiesInput.value)) {
+
+  if ((nameInput.value === 'Name of Hedgehog') ||
+  (!nameInput.value) ||
+  (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) ||
+  (isNaN(hogletsInput.value)) || (allergiesInput.value === 'Allergies') ||
+  (!allergiesInput.value)) {
     alert.classList.remove('display-hidden');
   } else {
+
     alert.classList.add('display-hidden');
     invitationList.innerHTML +=
       `<div class="invitation-list-items">
