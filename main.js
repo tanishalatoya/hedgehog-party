@@ -11,7 +11,7 @@ inviteBtn.addEventListener('click', inviteHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
 function toggleInviteBtn(event) {
-  if (nameInput.value.length >= 3 && hogletsInput.value && allergiesInput.value.length >= 3) {
+  if ((nameInput.value.length >= 3) && (hogletsInput.value) && (allergiesInput.value.length >= 3)) {
     inviteBtn.disabled = false;
     inviteBtn.classList.add('active');
 
@@ -21,6 +21,8 @@ function toggleInviteBtn(event) {
   };
 
 function inviteHedgehog() {
+  // For refactored version, create another if/else statement bfore this one to check only the input of the hogletsInput to ensure it is a number, and display a specific error message by changing the innerText of the alert-text // IDEA:
+
   var alert = document.querySelector('.alert');
 
   if ((nameInput.value === 'Name of Hedgehog') ||
