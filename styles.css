@@ -70,6 +70,7 @@ section {
 
 .main-section-invite-form form {
   width: 100%;
+
 }
 
 .main-section-invite-form h2 {
@@ -93,33 +94,38 @@ section {
   height: 12%;
   padding-left: 1.5em;
   padding: .5%;
-  width: 90%;
+  width: 95%;
 }
 
 .main-section-invite-form button {
-  background: #382C5F;
+  background: #bab0da;
   border-radius: 0%;
   color: white;
   cursor: not-allowed;
   font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   height: 15%;
-  width: 91%;
+  width: 96%;
 }
 
-.main-section-invite-form .active button {
+.main-section-invite-form button.active {
   background: #382C5F;
-  border-radius: 0%;
-  color: white;
   cursor: pointer;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1em;
-  height: 15%;
-  width: 91%;
 }
 
 section img {
   height: auto;
   margin-top: 7%;
   width: 25%;
+}
+
+.alert {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.display-hidden {
+  display: none;
 }
