@@ -4,6 +4,7 @@ var invitationList = document.querySelector('.main-section-invitation-list');
 var inviteBtn = document.querySelector('#invite-btn');
 var inviteForm = document.querySelector('.main-section-invite-form');
 var nameInput = document.querySelector('#name-input');
+var allHedgehogs = [];
 
 
 inviteForm.addEventListener('input', toggleInviteBtn);
@@ -50,6 +51,9 @@ function inviteHedgehog() {
         <p id="allergies">${hedgehog.allergies}</p>
         <button id="uninvite-btn" type="button" name="uninvite">Uninvite</button>
       </div>`
+
+      allHedgehogs.push(hedgehog);
+      console.log(allHedgehogs);
 
       allergiesInput.value = 'Allergies';
       hogletsInput.value = 'Number of Hoglets';
