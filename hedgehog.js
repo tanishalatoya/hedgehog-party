@@ -5,7 +5,14 @@ class Hedgehog {
     this.allergies = allergies;
   }
 
-  uninvite() {
+  storeHedgehog() {
 
+    var stringifyHedgehog = JSON.stringify(allHedgehogs);
+    console.log(stringifyHedgehog);
+    localStorage.setItem('hedgehogs', stringifyHedgehog);
+  }
+
+  uninvite() {
+    // Is this function to call to remove it from storage?
   }
 };
