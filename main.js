@@ -33,6 +33,7 @@ function inviteHedgehog() {
   var alert = document.querySelector('.alert');
   var hedgehog = new Hedgehog(nameInput.value, hogletsInput.value, allergiesInput.value);
 
+
   if ((nameInput.value === 'Name of Hedgehog') ||
   (!nameInput.value) ||
   (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) ||
@@ -54,6 +55,7 @@ function inviteHedgehog() {
 
       allHedgehogs.push(hedgehog);
       console.log(allHedgehogs);
+      hedgehog.storeHedgehog();
 
       allergiesInput.value = 'Allergies';
       hogletsInput.value = 'Number of Hoglets';
@@ -63,7 +65,7 @@ function inviteHedgehog() {
   }
 };
 
-function uninviteHedgehog(event) {
+function uninviteHedgehog() {
   if(event.target.parentElement.parentElement.children[2].childNodes[7].id === 'uninvite-btn') {
     event.target.parentElement.remove();
   }
