@@ -12,6 +12,11 @@ class Hedgehog {
     localStorage.setItem('hedgehogs', stringifyHedgehog);
   }
 
+  takeHedgehogOutOfStorage() {
+    var parsedHedgeHog = JSON.parse(allHedgehogs);
+    localStorage.getITem('storedHedgehog', parsedHedgeHog);
+  }
+
   uninvite() {
     // Is this function to call to remove it from storage?
   }
