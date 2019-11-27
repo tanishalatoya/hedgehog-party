@@ -4,7 +4,7 @@ var invitationList = document.querySelector('.main-section-invitation-list');
 var inviteBtn = document.querySelector('#invite-btn');
 var inviteForm = document.querySelector('.main-section-invite-form');
 var nameInput = document.querySelector('#name-input');
-var allHedgehogs = [];
+var allHedgehogs;
 
 window.addEventListener('load', loadInviteList);
 inviteForm.addEventListener('input', toggleInviteBtn);
@@ -13,10 +13,12 @@ invitationList.addEventListener('click', uninviteHedgehog);
 
 
 function loadInviteList() {
+  allHedgehogs = [];
   var retrievedHedgehogs = localStorage.getItem('hedgehogs');
   var parsedHedgehogs = JSON.parse(retrievedHedgehogs);
+  console.log({parsedHedgehogs});
 
-  if(parsedHedgehogs.length >=1) {
+  if(parsedHedgehogs) {
     for (var i = 0; i < parsedHedgehogs.length; i++) {
       var hedgehogFromStorage = new Hedgehog(parsedHedgehogs[i].name, parsedHedgehogs[i].hoglets, parsedHedgehogs[i].allergies);
 
@@ -82,7 +84,8 @@ function inviteHedgehog() {
 };
 
 function uninviteHedgehog() {
+
   if(event.target.parentElement.parentElement.children[2].childNodes[7].id === 'uninvite-btn') {
-    event.target.parentElement.remove();
+        event.target.parentElement.remove();
   }
 };
