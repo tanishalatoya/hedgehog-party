@@ -6,15 +6,30 @@ var inviteForm = document.querySelector('.main-section-invite-form');
 var nameInput = document.querySelector('#name-input');
 var allHedgehogs = [];
 
-
+window.addEventListener('load', loadInviteList);
 inviteForm.addEventListener('input', toggleInviteBtn);
 inviteBtn.addEventListener('click', inviteHedgehog);
 invitationList.addEventListener('click', uninviteHedgehog);
 
 
-//Stringify items to put them in local storage (do I have to do this if they're not an object... do I then create an object to do that?)
-// On page load, remove items from storage
-// And have them populate on the page using interpolation
+function loadInviteList() {
+  var retrievedHedgehogs = localStorage.getItem('hedgehogs');
+  var parsedHedgehogs = JSON.parse(retrievedHedgehogs);
+
+  if(parsedHedgehogs.length >=1) {
+    for (var i = 0; i < parsedHedgehogs.length; i++) {
+      var hedgehogFromStorage = new Hedgehog(parsedHedgehogs[i].name, parsedHedgehogs[i].hoglets, parsedHedgehogs[i].allergies);
+
+      invitationList.innerHTML +=
+        `<div class="invitation-list-items">
+          <p id="name">${hedgehogFromStorage.name}</p>
+          <p id="hoglets">${hedgehogFromStorage.hoglets}</p>
+          <p id="allergies">${hedgehogFromStorage.allergies}</p>
+          <button id="uninvite-btn" type="button" name="uninvite">Uninvite</button>
+        </div>`
+    }
+  }
+}
 
 
 function toggleInviteBtn(event) {
@@ -33,7 +48,6 @@ function inviteHedgehog() {
   var alert = document.querySelector('.alert');
   var hedgehog = new Hedgehog(nameInput.value, hogletsInput.value, allergiesInput.value);
 
-
   if ((nameInput.value === 'Name of Hedgehog') ||
   (!nameInput.value) ||
   (hogletsInput.value === 'Number of Hoglets') || (!hogletsInput.value) ||
@@ -41,7 +55,6 @@ function inviteHedgehog() {
   (allergiesInput.value === 'Allergies') ||
   (!allergiesInput.value)) {
     alert.classList.remove('display-hidden');
-
 
   } else {
     alert.classList.add('display-hidden');
@@ -62,6 +75,7 @@ function inviteHedgehog() {
       nameInput.value = 'Name of Hedgehog';
 
       inviteBtn.classList.remove('active');
+
   }
 };
 
