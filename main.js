@@ -27,6 +27,8 @@ function loadInviteList() {
           <p id="allergies">${hedgehogFromStorage.allergies}</p>
           <button id="uninvite-btn" type="button" name="uninvite">Uninvite</button>
         </div>`
+
+        allHedgehogs.push(hedgehogFromStorage);
     }
   }
 }
